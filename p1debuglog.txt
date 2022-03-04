@@ -1,1 +1,211 @@
+ gcc -g p1final.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x8ed: file p1final.c, line 47.
+(gdb) r
+Starting program: /home/runner/Test3Session2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
 
+Breakpoint 1, main () at p1final.c:47
+47  {
+(gdb) n
+49    input(&num1,&den1,&num2,&den2);
+(gdb) s
+input (num1=0x7fff3afe3f60, den1=0x7fff3afe3f64, num2=0x7fff3afe3f68, den2=0x7fff3afe3f6c)
+    at p1final.c:5
+5     printf("Enter the numerator and denominator of first fraction\n");
+(gdb) n
+Enter the numerator and denominator of first fraction
+6     scanf("%d %d", num1, den1);
+(gdb) n
+3 5
+7     printf("Enter the numerator and denominator of second fraction\n");
+(gdb) n
+Enter the numerator and denominator of second fraction
+8     scanf("%d %d", num2, den2);
+(gdb) n
+4 6
+9   }
+(gdb) n
+main () at p1final.c:50
+50    add(num1,den1,num2,den2,&num3,&den3);
+(gdb) s
+add (num1=3, den1=5, num2=4, den2=6, num3=0x7fff3afe3f70, den3=0x7fff3afe3f74)
+    at p1final.c:14
+14    *num3 = (num1*den2) + (num2*den1);
+(gdb) s
+15    *den3 = (den1*den2);
+(gdb) s
+16    if (*num3 > *den3)
+(gdb) n
+19          smallest = *den3;
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+30          if ((*num3 % i == 0) && (*den3 % i == 0)) 
+(gdb) n
+33              *num3 = *num3 / i;
+(gdb) n
+34              *den3 = *den3 / i;
+(gdb) nn
+Undefined command: "nn".  Try "help".
+(gdb) n
+27      for (int i = smallest; i > 1; i--) 
+(gdb) n
+39  }
+(gdb) n
+main () at p1final.c:51
+51    output(num1,den1,num2,den2,num3,den3);
+(gdb) s
+output (num1=3, den1=5, num2=4, den2=6, num3=19, den3=15) at p1final.c:43
+43    printf("The Sum of %d/%d and %d/%d is %d/%d", num1, den1, num2, den2, num3, den3);
+(gdb) s
+__printf (format=0x55e826000a70 "The Sum of %d/%d and %d/%d is %d/%d") at printf.c:28
+28  printf.c: No such file or directory.
+(gdb) n
+32  in printf.c
+(gdb) n
+33  in printf.c
+(gdb) n
+32  in printf.c
+(gdb) n
+33  in printf.c
+(gdb) n
+37  in printf.c
+(gdb) n
+output (num1=3, den1=5, num2=4, den2=6, num3=19, den3=15) at p1final.c:44
+44  }
+(gdb) n
+main () at p1final.c:52
+52    return 0;
+(gdb) c
+Continuing.
+The Sum of 3/5 and 4/6 is 19/15[Inferior 1 (process 46) exited normally]
+(gdb) q
