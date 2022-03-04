@@ -1,1 +1,110 @@
+ gcc -g p2final.c
+ gdb a.out
+GNU gdb (Ubuntu 8.1.1-0ubuntu1) 8.1.1
+Copyright (C) 2018 Free Software Foundation, Inc.
+License GPLv3+: GNU GPL version 3 or later <http://gnu.org/licenses/gpl.html>
+This is free software: you are free to change and redistribute it.
+There is NO WARRANTY, to the extent permitted by law.  Type "show copying"
+and "show warranty" for details.
+This GDB was configured as "x86_64-linux-gnu".
+Type "show configuration" for configuration details.
+For bug reporting instructions, please see:
+<http://www.gnu.org/software/gdb/bugs/>.
+Find the GDB manual and other documentation resources online at:
+<http://www.gnu.org/software/gdb/documentation/>.
+For help, type "help".
+Type "apropos word" to search for commands related to "word"...
+Reading symbols from a.out...done.
+(gdb) b main
+Breakpoint 1 at 0x8a1: file p2final.c, line 36.
+(gdb) r
+Starting program: /home/runner/Test3Session2/a.out 
+warning: Error disabling address space randomization: Operation not permitted
 
+Breakpoint 1, main () at p2final.c:36
+36  f1=input_fraction();
+(gdb) s
+input_fraction () at p2final.c:9
+9   {
+(gdb) n
+11    printf("Enter the fraction\n");
+(gdb) n
+Enter the fraction
+12    scanf("%d%d", &f.num,&f.den);
+(gdb) n
+1 5
+13    return f;
+(gdb) p f
+$1 = {num = 1, den = 5}
+(gdb) n
+14  }
+(gdb) n
+main () at p2final.c:37
+37  f2=input_fraction();
+(gdb) s
+input_fraction () at p2final.c:9
+9   {
+(gdb) n
+11    printf("Enter the fraction\n");
+(gdb) n
+Enter the fraction
+12    scanf("%d%d", &f.num,&f.den);
+(gdb) n
+2 5
+13    return f;
+(gdb) p f
+$2 = {num = 2, den = 5}
+(gdb) n
+14  }
+(gdb) n
+main () at p2final.c:38
+38  f3=input_fraction();
+(gdb) s
+input_fraction () at p2final.c:9
+9   {
+(gdb) n
+11    printf("Enter the fraction\n");
+(gdb) n
+Enter the fraction
+12    scanf("%d%d", &f.num,&f.den);
+(gdb) n
+3 5
+13    return f;
+(gdb) p f
+$3 = {num = 3, den = 5}
+(gdb) n
+14  }
+(gdb) n
+main () at p2final.c:39
+39  smallest = find_smallest(f1,f2,f3);
+(gdb) s
+find_smallest (f1=..., f2=..., f3=...) at p2final.c:17
+17    int common_denominator = f1.den + f2.den + f3.den;
+(gdb) n
+18    int num1 = f1.num * common_denominator/f1.den;
+(gdb) n
+19    int num2 = f2.num * common_denominator/f2.den;
+(gdb) n
+20    int num3 = f3.num * common_denominator/f3.den;
+(gdb) n
+21    if (num1 < num2 && num1 < num3)
+(gdb) n
+22      return f1;
+(gdb) n
+27  }
+(gdb) n
+main () at p2final.c:40
+40  output(f1,f2,f3,smallest);
+(gdb) s
+output (f1=..., f2=..., f3=..., smallest=...) at p2final.c:30
+30    printf("The smallest of %d/%d, %d/%d, %d/%d is %d/%d\n", f1.num,f1.den,f2.num,f2.den,f3.num,f3.den,smallest.num,smallest.den);
+(gdb) n
+The smallest of 1/5, 2/5, 3/5 is 1/5
+31  }
+(gdb) n
+main () at p2final.c:41
+41  return 0;
+(gdb) c
+Continuing.
+[Inferior 1 (process 424) exited normally]
+(gdb) q
